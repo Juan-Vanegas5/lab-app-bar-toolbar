@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitud de envío de encomienda"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Remitente"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_remitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del remitente"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edit_telefono_remitente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teléfono del remitente"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Destinatario"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_destinatario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del destinatario"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edit_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección de entrega"
+                android:inputType="textPostalAddress" />
+
+            <EditText
+                android:id="@+id/edit_ciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciudad de destino"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Encomienda"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contenido de la encomienda"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_peso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Peso (kg)"
+                android:inputType="numberDecimal" />
+
+            <RadioGroup
+                android:id="@+id/radio_tipo_envio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checkedButton="@+id/radio_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de envío: " />
+
+                <RadioButton
+                    android:id="@+id/radio_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal" />
+
+                <RadioButton
+                    android:id="@+id/radio_express"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Express" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button_registrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onClickRegistrar"
+                android:text="@string/registrar_solicitud" />
+
+            <Button
+                android:id="@+id/button_compartir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="onClickCompartir"
+                android:text="@string/compartir_solicitud" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

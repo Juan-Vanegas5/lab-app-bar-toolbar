@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Solicitudes de Envío</string>
+    <string name="caracteristicas_envio">Características del envío</string>
+    <string name="crear_notificacion">Crear notificación</string>
+    <string name="registrar_solicitud">Registrar solicitud</string>
+    <string name="compartir_solicitud">Compartir solicitud</string>
+</resources>
